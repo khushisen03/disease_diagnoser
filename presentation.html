@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Diagnoser - Project Presentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+            background: white;
+            margin-bottom: 2px;
+            page-break-after: always;
+        }
+        
+        .slide h1 {
+            font-size: 3.5rem;
+            color: #667eea;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .slide h2 {
+            font-size: 2.5rem;
+            color: #764ba2;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .slide h3 {
+            font-size: 1.8rem;
+            color: #667eea;
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+        
+        .slide ul, .slide ol {
+            font-size: 1.3rem;
+            line-height: 2;
+            margin-left: 40px;
+            max-width: 900px;
+        }
+        
+        .slide li {
+            margin-bottom: 15px;
+        }
+        
+        .slide p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            max-width: 900px;
+            text-align: center;
+        }
+        
+        .title-slide {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .title-slide h1 {
+            color: white;
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .title-slide p {
+            font-size: 1.8rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        .feature-box {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+        }
+        
+        .tech-item {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .tech-item h4 {
+            color: #667eea;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .code-block {
+            background: #2d3748;
+            color: #68d391;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            max-width: 800px;
+            text-align: left;
+        }
+        
+        @media print {
+            .slide {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Slide 1: Title -->
+    <div class="slide title-slide">
+        <h1>Disease Diagnoser</h1>
+        <p style="font-size: 2rem; margin-top: 20px;">AI-Powered Medical Diagnosis System</p>
+        <p style="margin-top: 40px;">with Medication Prescriptions</p>
+        <p style="margin-top: 60px; font-size: 1.5rem; opacity: 0.8;">Built with React & TypeScript</p>
+    </div>
+
+    <!-- Slide 2: Project Overview -->
+    <div class="slide">
+        <h2>Project Overview</h2>
+        <div style="max-width: 1000px; margin-top: 40px;">
+            <ul style="text-align: left;">
+                <li><strong>Intelligent Symptom Analysis:</strong> Users input symptoms to get potential diagnoses</li>
+                <li><strong>AI-Powered Matching:</strong> Advanced algorithm matches symptoms to diseases</li>
+                <li><strong>Medication Prescriptions:</strong> Provides detailed medication information</li>
+                <li><strong>Premium User Interface:</strong> Modern, responsive design with glassmorphism effects</li>
+                <li><strong>Real-time Results:</strong> Instant diagnosis with match percentage scores</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 3: Problem Statement -->
+    <div class="slide">
+        <h2>Problem Statement</h2>
+        <div class="two-column" style="margin-top: 40px;">
+            <div class="feature-box">
+                <h3>Healthcare Challenges</h3>
+                <ul style="font-size: 1.2rem;">
+                    <li>Limited access to initial consultation</li>
+                    <li>Need for quick symptom assessment</li>
+                    <li>Lack of medication information</li>
+                    <li>Time-consuming doctor visits</li>
+                </ul>
+            </div>
+            <div class="feature-box">
+                <h3>Our Solution</h3>
+                <ul style="font-size: 1.2rem;">
+                    <li>Instant symptom-based diagnosis</li>
+                    <li>Comprehensive medication details</li>
+                    <li>User-friendly interface</li>
+                    <li>Accessible 24/7</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Key Features -->
+    <div class="slide">
+        <h2>Key Features</h2>
+        <div class="two-column" style="margin-top: 40px;">
+            <div class="feature-box">
+                <h3>1. Symptom Input</h3>
+                <ul style="font-size: 1.1rem;">
+                    <li>Pre-defined common symptoms</li>
+                    <li>Custom symptom entry</li>
+                    <li>Multiple selection</li>
+                </ul>
+            </div>
+            <div class="feature-box">
+                <h3>2. Intelligent Matching</h3>
+                <ul style="font-size: 1.1rem;">
+                    <li>Advanced algorithm</li>
+                    <li>Match score calculation</li>
+                    <li>Top 5 results</li>
+                </ul>
+            </div>
+            <div class="feature-box">
+                <h3>3. Detailed Results</h3>
+                <ul style="font-size: 1.1rem;">
+                    <li>Disease descriptions</li>
+                    <li>Match percentages</li>
+                    <li>Ranked results</li>
+                </ul>
+            </div>
+            <div class="feature-box">
+                <h3>4. Medication Info</h3>
+                <ul style="font-size: 1.1rem;">
+                    <li>Drug names & dosages</li>
+                    <li>Frequency & duration</li>
+                    <li>Safety instructions</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Technology Stack -->
+    <div class="slide">
+        <h2>Technology Stack</h2>
+        <div class="tech-stack" style="margin-top: 40px;">
+            <div class="tech-item">
+                <h4>React 19.1.1</h4>
+                <p>UI Framework</p>
+            </div>
+            <div class="tech-item">
+                <h4>TypeScript 4.9.5</h4>
+                <p>Type Safety</p>
+            </div>
+            <div class="tech-item">
+                <h4>Custom CSS</h4>
+                <p>Premium Styling</p>
+            </div>
+            <div class="tech-item">
+                <h4>Create React App</h4>
+                <p>Build Tools</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6: Architecture -->
+    <div class="slide">
+        <h2>Project Architecture</h2>
+        <div class="code-block" style="margin-top: 40px;">
+disease-diagnoser/
+├── src/
+│   ├── App.tsx              # Main component
+│   ├── App.css              # Premium styling
+│   ├── components/
+│   │   ├── SymptomForm.tsx  # Input form
+│   │   ├── Result.tsx       # Results display
+│   │   └── MedicationPrescription.tsx
+│   └── index.tsx            # Entry point
+        </div>
+    </div>
+
+    <!-- Slide 7: Algorithm -->
+    <div class="slide">
+        <h2>Matching Algorithm</h2>
+        <div style="max-width: 900px; margin-top: 40px;">
+            <ol style="text-align: left; font-size: 1.3rem;">
+                <li><strong>Symptom Collection:</strong> Gathers all user symptoms</li>
+                <li><strong>Normalization:</strong> Converts to lowercase</li>
+                <li><strong>Pattern Matching:</strong> Finds overlapping symptoms</li>
+                <li><strong>Score Calculation:</strong> Match Score = (Matching Symptoms) / (Max Symptoms)</li>
+                <li><strong>Ranking:</strong> Sorts by match score</li>
+                <li><strong>Filtering:</strong> Shows top 5 results</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Slide 8: Disease Database -->
+    <div class="slide">
+        <h2>Disease Database</h2>
+        <div style="max-width: 1000px; margin-top: 40px;">
+            <ul style="text-align: left; font-size: 1.2rem;">
+                <li><strong>Common Cold:</strong> fever, cough, headache → Acetaminophen, Ibuprofen</li>
+                <li><strong>Pneumonia:</strong> fever, cough, chest pain → Amoxicillin, Azithromycin</li>
+                <li><strong>Migraine:</strong> headache, nausea, fatigue → Sumatriptan, Ibuprofen</li>
+                <li><strong>Flu:</strong> fever, sweating, fatigue → Oseltamivir, Acetaminophen</li>
+                <li><strong>Heart Disease:</strong> chest pain, shortness of breath → Aspirin, Atorvastatin</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 9: UI Design -->
+    <div class="slide">
+        <h2>Premium UI Design</h2>
+        <div class="two-column" style="margin-top: 40px;">
+            <div class="feature-box">
+                <h3>Visual Elements</h3>
+                <ul style="font-size: 1.1rem;">
+                    <li>Gradient backgrounds</li>
+                    <li>Glassmorphism effects</li>
+                    <li>Smooth animations</li>
+                    <li>Hover effects</li>
+                    <li>Professional typography</li>
+                </ul>
+            </div>
+            <div class="feature-box">
+                <h3>Color Scheme</h3>
+                <ul style="font-size: 1.1rem;">
+                    <li>Primary: <span class="highlight">#667eea</span></li>
+                    <li>Secondary: <span class="highlight">#764ba2</span></li>
+                    <li>Gradient combinations</li>
+                    <li>Animated overlays</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 10: Features Detailed -->
+    <div class="slide">
+        <h2>Advanced Features</h2>
+        <div style="max-width: 1000px; margin-top: 40px;">
+            <ul style="text-align: left; font-size: 1.2rem;">
+                <li><strong>Interactive Symptom Selection:</strong> Visual checkbox grid with real-time feedback</li>
+                <li><strong>Real-time Diagnosis:</strong> Instant results with loading animations</li>
+                <li><strong>Medication Information:</strong> Complete prescription details with safety instructions</li>
+                <li><strong>User Experience:</strong> Reset functionality, smooth transitions, error handling</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 11: Code Quality -->
+    <div class="slide">
+        <h2>Code Quality & Best Practices</h2>
+        <div class="two-column" style="margin-top: 40px;">
+            <div class="feature-box">
+                <h3>TypeScript</h3>
+                <ul style="font-size: 1.1rem;">
+                    <li>Type-safe interfaces</li>
+                    <li>Proper type definitions</li>
+                    <li>Component prop typing</li>
+                </ul>
+            </div>
+            <div class="feature-box">
+                <h3>React</h3>
+                <ul style="font-size: 1.1rem;">
+                    <li>Functional components</li>
+                    <li>Hooks (useState)</li>
+                    <li>Component composition</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 12: Security -->
+    <div class="slide">
+        <h2>Security & Safety</h2>
+        <div style="max-width: 900px; margin-top: 40px;">
+            <div class="feature-box" style="background: #fff3cd; border-color: #ffc107;">
+                <h3 style="color: #856404;">⚠️ Medical Disclaimer</h3>
+                <ul style="font-size: 1.1rem; color: #856404;">
+                    <li>For informational purposes only</li>
+                    <li>Not a replacement for professional medical advice</li>
+                    <li>Always consult healthcare professionals</li>
+                    <li>No data collection or storage</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 13: Future Enhancements -->
+    <div class="slide">
+        <h2>Future Enhancements</h2>
+        <div style="max-width: 1000px; margin-top: 40px;">
+            <ul style="text-align: left; font-size: 1.2rem;">
+                <li>Expanded disease database with more conditions</li>
+                <li>Machine learning integration for better accuracy</li>
+                <li>User accounts with symptom history</li>
+                <li>Doctor consultation booking integration</li>
+                <li>Multilingual support</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 14: Statistics -->
+    <div class="slide">
+        <h2>Project Statistics</h2>
+        <div class="two-column" style="margin-top: 40px;">
+            <div class="feature-box">
+                <h3>Code Metrics</h3>
+                <ul style="font-size: 1.1rem;">
+                    <li>4 main components</li>
+                    <li>700+ lines of code</li>
+                    <li>5 TypeScript files</li>
+                    <li>8 dependencies</li>
+                </ul>
+            </div>
+            <div class="feature-box">
+                <h3>Features</h3>
+                <ul style="font-size: 1.1rem;">
+                    <li>5 diseases in database</li>
+                    <li>2 medications per disease</li>
+                    <li>8 common symptoms</li>
+                    <li>Top 5 results display</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 15: Conclusion -->
+    <div class="slide">
+        <h2>Conclusion</h2>
+        <div style="max-width: 900px; margin-top: 40px;">
+            <ul style="text-align: left; font-size: 1.3rem;">
+                <li>✅ Modern disease diagnosis application</li>
+                <li>✅ Premium user interface</li>
+                <li>✅ Medication prescription system</li>
+                <li>✅ Responsive web application</li>
+                <li>✅ Production-ready code</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 16: Thank You -->
+    <div class="slide title-slide">
+        <h1>Thank You!</h1>
+        <p style="font-size: 2rem; margin-top: 60px;">Questions & Discussion</p>
+        <p style="margin-top: 80px; font-size: 1.5rem; opacity: 0.8;">Disease Diagnoser</p>
+        <p style="font-size: 1.2rem; opacity: 0.7;">Modern Healthcare Technology</p>
+    </div>
+</body>
+</html>
